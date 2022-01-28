@@ -1,0 +1,17 @@
+Header HTML
+<sly data-sly-use.headerModel="${'com.toy.core.models.HeaderModel'}">
+<div class="header">
+    <div class="header-logo">
+        <a href="${headerModel.getLogoLink}.html">
+            <img src="${headerModel.getLogoImagePath}"/>
+        </a>
+    </div>
+    <div class="header-links">
+        <ul>
+        	<sly data-sly-list.headerLinkItem="${headerModel.getHeaderlinks}">
+            	<li class="header-link"><a href="${headerLinkItem.getLinkPath}.html">${headerLinkItem.getLinkTitle}</a></li>
+            </sly>                           
+        </ul>
+    </div>
+</div>
+</sly>
